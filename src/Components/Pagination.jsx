@@ -10,10 +10,10 @@ export default function Pagination({ countriesPerPage, totalCountries, paginate,
       } 
     
       return (
-        <div>
+        <div className="numbersFather">
           {pageNumbers.map((number, i) => (
-            <div key={i}>
-              <a onClick={() => paginate(number)} href="!#">
+            <div className="numbers" key={i}>
+              <a className="number" onClick={() => paginate(number)} href="!#">
                 {number}
               </a>
             </div>

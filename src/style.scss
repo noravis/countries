@@ -104,3 +104,29 @@ body {
     }
 }
     
+.numbersFather {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    
+
+    .numbers {
+        padding: 10px;
+        text-decoration: none;
+        display: flex;
+        
+        
+        .number {
+            text-decoration: none;
+            color: black;
+            padding: 5px;
+        }
+        .number:focus {
+            text-decoration: none;
+            color: #52734D;
+            border: 2px solid #52734D;
+            padding: 5px;
+        }
+    }
+}
