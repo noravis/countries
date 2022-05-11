@@ -29,6 +29,10 @@ export default function ListItems() {
     setFilteredC(filteredCCopy.sort((a, b) => (a.name > b.name ? -1 : 1)));
   };
 
+  const resetAll = () => {
+    setFilteredC([])
+   };
+
   const handleInput = (e) => {
     switch (e.target.value) {
       case "oceania":
@@ -49,7 +53,7 @@ export default function ListItems() {
   return (
     <>
       <div>Countries</div>
-      <Buttons sortA={sortA} sortD={sortD}></Buttons>
+      <Buttons sortA={sortA} sortD={sortD} resetAll={resetAll}></Buttons>
       <Filter handleInput={handleInput}></Filter>
       <ul>
         {filteredC.map((country, i) => (
