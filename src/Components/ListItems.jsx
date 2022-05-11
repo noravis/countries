@@ -4,8 +4,13 @@ import Buttons from "./Buttons";
 import Filter from "./Filter";
 
 export default function ListItems() {
+
+
   const [countries, setCountries] = useState([]);
   const [filteredC, setFilteredC] = useState([]);
+
+
+//fetch data with axios start
 
   useEffect(() => {
     axios
@@ -14,6 +19,12 @@ export default function ListItems() {
         setCountries(response.data);
       });
   }, []);
+
+//fetch data with axios end
+
+
+
+//sorting functions start
 
   const sortA = () => {
     const countriesCopy = [...countries];
@@ -29,10 +40,20 @@ export default function ListItems() {
     setFilteredC(filteredCCopy.sort((a, b) => (a.name > b.name ? -1 : 1)));
   };
 
+//sorting functions end
+
+
+
+//reset function start
+
   const resetAll = () => {
     setFilteredC([])
    };
+//reset function end
 
+
+
+//handleInput function start
   const handleInput = (e) => {
     switch (e.target.value) {
       case "oceania":
@@ -50,9 +71,13 @@ export default function ListItems() {
       default:
     }
   };
+
+  //handleInput function end
+
+
   return (
     <>
-      <div>Countries</div>
+      <div className="upper-block">Countries</div>
       <Buttons sortA={sortA} sortD={sortD} resetAll={resetAll}></Buttons>
       <Filter handleInput={handleInput}></Filter>
       <ul>

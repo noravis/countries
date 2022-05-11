@@ -1,5 +1,6 @@
 
 import './App.css';
+import './style.scss';
 import ListItems from './Components/ListItems';
 
 

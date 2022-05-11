@@ -1,0 +1,27 @@
+* {
+    font-family: 'lato', sans-serif;
+}
+
+/*
+#FEFFDE => off white
+#DDFFBC => light green
+#91C788 => light green darker
+#52734D => dark green
+*/
+
+body {
+    background: #FEFFDE;
+}
+
+.upper-block {
+    background: #52734D;
+    color: #FEFFDE;
+    width: 150px;
+    height: 60px;
+    font-size: 30px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 50px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+}
