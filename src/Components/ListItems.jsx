@@ -10,7 +10,7 @@ export default function ListItems() {
   const [countries, setCountries] = useState([]);
   const [filteredC, setFilteredC] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [countriesPerPage] = useState(7);
+  const [countriesPerPage] = useState(10);
 
 
 //fetch data with axios start
