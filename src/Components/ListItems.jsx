@@ -17,12 +17,16 @@ export default function ListItems() {
 
   const sortA = () => {
     const countriesCopy = [...countries];
+    const filteredCCopy = [...filteredC];
     setCountries(countriesCopy.sort((a, b) => (a.name > b.name ? 1 : -1)));
+    setFilteredC(filteredCCopy.sort((a, b) => (a.name > b.name ? 1 : -1)));
   };
 
   const sortD = () => {
     const countriesCopy = [...countries];
+    const filteredCCopy = [...filteredC];
     setCountries(countriesCopy.sort((a, b) => (a.name > b.name ? -1 : 1)));
+    setFilteredC(filteredCCopy.sort((a, b) => (a.name > b.name ? -1 : 1)));
   };
 
   const handleInput = (e) => {

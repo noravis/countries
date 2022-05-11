@@ -6,7 +6,6 @@ export default function Filter ({handleInput}) {
                 <option  value='smaller'>Countries smaller that LT</option>
                 <option value='oceania'>Countries in Oceania region</option>
             </select>
-    
         </div>
     )
 }
