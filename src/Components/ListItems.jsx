@@ -80,19 +80,19 @@ export default function ListItems() {
       <div className="upper-block">Countries</div>
       <Buttons sortA={sortA} sortD={sortD} resetAll={resetAll}></Buttons>
       <Filter handleInput={handleInput}></Filter>
-      <ul>
+      <ul className="list-item">
         {filteredC.map((country, i) => (
-          <li key={i}>
-            <span>{country.name}</span>
-            <span>{country.region}</span>
-            <span>{country.area}</span>
+          <li className="list-item" key={i}>
+            <span className="name">{country.name}</span>
+            <span className="region">{country.region}</span>
+            <span className="area">{country.area}</span>
           </li>
         ))}
         {countries.map((country, i) => (
-          <li key={i}>
-            <span>{country.name}</span>
-            <span>{country.region}</span>
-            <span>{country.area}</span>
+          <li className="list-item" key={i}>
+            <span className="name">{country.name}</span>
+            <span className="region">{country.region}</span>
+            <span className="area">{country.area}</span>
           </li>
         ))}
       </ul>
