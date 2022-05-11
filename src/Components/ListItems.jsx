@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Buttons from "./Buttons";
 
 
 export default function ListItems () {
@@ -16,12 +17,23 @@ export default function ListItems () {
           });
       }, []);
 
+    
+    
+    const sortA = () => {
+    const countriesCopy = [...countries];
+    setCountries(countriesCopy.sort((a, b) => (a.name > b.name ? 1 : -1)));
+  };
 
+    const sortD = () => {
+    const countriesCopy = [...countries];
+    setCountries(countriesCopy.sort((a, b) => (a.name > b.name ? -1 : 1)));
+  };
     
 
     return (
 <>
         <div>Countries</div>
+        <Buttons sortA={sortA} sortD={sortD}></Buttons>
         <ul>
             
             {countries.map((country, i) =>  
