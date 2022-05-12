@@ -61,6 +61,7 @@ const paginate = (pageNumber) => {
 //reset function start
 
   const resetAll = () => {
+    
     setFilteredC([])
     setCurrentPage(1);
    };

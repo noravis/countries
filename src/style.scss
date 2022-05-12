@@ -139,9 +139,7 @@ body {
 
     .button-father {
         margin-left: 10px;
-        justify-content: flex-start;
-        
-
+  
         .button {
             width: 60px;
             height: 30px;
@@ -174,7 +172,16 @@ body {
         margin-left: 90px;
    }
    .button-father {
-        justify-content: center;
+       margin-left: 50px;
+       width:300px;
+       justify-content: space-between;
+
+       .button {
+        width: 57px;
+        height: 20px;
+        font-size: 9px;
+        margin-left: 40px;
+    }
    }
 
     .list-item {
@@ -184,15 +191,16 @@ body {
 
     .filter-block {
         margin-left: 25px;
+        margin-top: 10px;
 
         .filter-label-father {
             justify-content: center;
         }
     }
     .list-item-father {
-        justify-content: center;
+        
         .list-item {
-            justify-content: center;
+            margin-left: 50px;
         }
     }
     
