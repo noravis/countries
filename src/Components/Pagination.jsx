@@ -17,29 +17,28 @@ export default function Pagination({
   return (
     <div className="numbersFather">
       {pageNumbers.includes(currentPage - 1) && (
-        <a
+        <button
           className="next"
-          href="!#"
           onClick={() => {
             setCurrentPage(currentPage - 1);
             paginate(currentPage - 1);
           }}
         >
           previous
-        </a>
+        </button>
       )}
       <div className="pages">page {currentPage}/{totalPages}</div>
       {pageNumbers.includes(currentPage + 1) && (
-        <a
+        <button
           className="next"
-          href="!#"
+          
           onClick={() => {
             setCurrentPage(currentPage + 1);
             paginate(currentPage + 1);
           }}
         >
           next
-        </a>
+        </button>
       )}
     </div>
   );
