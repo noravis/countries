@@ -5,11 +5,6 @@
 ![Sugar Status](https://img.shields.io/badge/Sugar-Free-green.svg)
 ![Eco Status](https://img.shields.io/badge/ECO-Friendly-green.svg)
 
-# project for the test
-
-
-Educational practical task to test out basic HTML and CSS skils. 
-
 Site published at:  https://noravis.github.io/countries/
 
 ## Project features
