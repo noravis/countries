@@ -8,14 +8,17 @@ export default function Pagination({
   const totalPages = Math.ceil(totalCountries / countriesPerPage);
 
   const pageNumbers = [];
-  for (let i = 1; i < totalPages; i++) {
+  for (let i = 1; i < totalPages+1; i++) {
     pageNumbers.push(i);
   }
+
+
 
   return (
     <div className="numbersFather">
       {pageNumbers.includes(currentPage - 1) && (
         <a
+          className="next"
           href="!#"
           onClick={() => {
             setCurrentPage(currentPage - 1);
@@ -25,15 +28,10 @@ export default function Pagination({
           previous
         </a>
       )}
-      {pageNumbers.map((number, i) => (
-        <div className="numbers" key={i}>
-          <a className="number" onClick={() => paginate(number)} href="!#">
-            {number}
-          </a>
-        </div>
-      ))}
+      <div className="pages">page {currentPage}/{totalPages}</div>
       {pageNumbers.includes(currentPage + 1) && (
         <a
+          className="next"
           href="!#"
           onClick={() => {
             setCurrentPage(currentPage + 1);

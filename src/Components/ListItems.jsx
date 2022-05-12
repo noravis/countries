@@ -31,7 +31,8 @@ export default function ListItems() {
 // functions for pagination start
 const indexOfLast = currentPage * countriesPerPage;
 const indexOfFirst = indexOfLast - countriesPerPage;
-const shownCountries = countries.slice(indexOfFirst, indexOfLast)
+const shownCountries = filteredC.length>0 ? filteredC.slice(indexOfFirst, indexOfLast)  :countries.slice(indexOfFirst, indexOfLast)
+// const shownCountriesFiltered = filteredC.slice(indexOfFirst, indexOfLast)
 
 const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -46,6 +47,7 @@ const paginate = (pageNumber) => {
     const filteredCCopy = [...filteredC];
     setCountries(countriesCopy.sort((a, b) => (a.name > b.name ? 1 : -1)));
     setFilteredC(filteredCCopy.sort((a, b) => (a.name > b.name ? 1 : -1)));
+    shownCountries.sort((a, b) => (a.name > b.name ? 1 : -1))
   };
 
   const sortD = () => {
@@ -63,6 +65,7 @@ const paginate = (pageNumber) => {
 
   const resetAll = () => {
     setFilteredC([]);
+    setCurrentPage(1);
     setSelect('default')
    };
 
@@ -103,22 +106,23 @@ const changeSelect = (e) => {
       <Buttons sortA={sortA} sortD={sortD} resetAll={resetAll}></Buttons>
       <Filter handleInput={handleInput} select={select} changeSelect={changeSelect}></Filter>
       <ul className="list-item-father">
-        {filteredC.map((country, i) => (
-          <li className="list-item" key={i}>
-            <span className="name">{country.name}</span>
-            <span className="region">{country.region}</span>
-            <span className="area">{country.area}</span>
-          </li>
-        ))}
         {shownCountries.map((country, i) => (
           <li className="list-item" key={i}>
             <span className="name">{country.name}</span>
-            <span className="region">{country.region}</span>
+            <span className="region">{country.region}</span><span>showCs</span>
             <span className="area">{country.area}</span>
           </li>
         ))}
       </ul>
-      <Pagination countriesPerPage={countriesPerPage} totalCountries={countries.length} paginate={paginate} currentPage={currentPage} setCurrentPage={setCurrentPage}></Pagination>
+      <Pagination countriesPerPage={countriesPerPage} totalCountries={filteredC.length>0? filteredC.length : countries.length} paginate={paginate} currentPage={currentPage} setCurrentPage={setCurrentPage}></Pagination>
     </>
   );
 }
+
+
+/* 
+Dalykai, kuriuos reikia pasidaryt: 
+- pagination su vienu mygtuku
+- pagination kai issifiltruoji
+
+*/

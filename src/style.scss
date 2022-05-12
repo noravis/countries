@@ -108,24 +108,31 @@ body {
     flex-flow: row wrap;
     justify-content: center;
     width: 100%;
+    margin-bottom: 20px;
 
-    .numbers {
-        display: flex;
-        text-decoration: none;
+
+    .pages {
+        width: 120px;
         padding: 10px;
-
-        .number {
-            color: black;
-            text-decoration: none;
-            padding: 5px;
-        }
-        .number:focus {
-            color: #52734d;
-            text-decoration: none;
-            border: 2px solid #52734d;
-            padding: 5px;
-        }
+        text-align: center;
+        font-size: 20px;
+        border: 2px solid #52734d;
     }
+    .previous, .next {
+        width: 60px;
+        height: 20px;
+        background: #ddffbc;
+        color: black;
+        font-size: 12px;
+        border: 2px solid #52734d;
+        border-radius: 3px;
+        text-align: center;
+        text-decoration:none;
+        line-height: 20px;
+        margin: 12px 20px;
+        cursor: pointer
+    }
+    
 }
 
 @media only screen and (max-width: 768px) {
