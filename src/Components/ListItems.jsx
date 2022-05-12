@@ -85,12 +85,14 @@ const changeSelect = (e) => {
         const filteredC = countries.filter(
           (country) => country.region === "Oceania");
           setFilteredC(filteredC);
+          setCurrentPage(1);
 
         break;
 
       case "smaller":
           const filteredC1 = countries.filter((country) => country.area < 65300);
           setFilteredC(filteredC1);
+          setCurrentPage(1);
 
         break;
       default:
