@@ -14,15 +14,15 @@ body {
 }
 
 .upper-block {
-    background: #52734d;
-    color: #feffde;
     width: 25%;
     height: 5%;
+    background: #52734d;
+    color: #feffde;
     font-size: 30px;
-    padding: 10px;
+    text-align: center;
     box-sizing: border-box;
-    margin: 50px;
-    margin-bottom: 10px;
+    padding: 10px;
+    margin: 50px 50px 10px 50px;
     border-radius: 2px;
 }
 
@@ -53,6 +53,8 @@ body {
 }
 
 .list-item {
+    display: flex;
+    flex-flow: column wrap;
     width: 94%;
     height: auto;
     background-color: #ddffbc;
@@ -61,15 +63,13 @@ body {
     text-align: left;
     padding: 10px;
     margin: 10px;
-    display: flex;
-    flex-flow: column wrap;
 
     .name,
     .region,
     .area {
+        max-width: fit-content;
         color: #52734d;
         font-weight: bold;
-        max-width: fit-content;
         line-height: 25px;
         margin-left: 10px;
     }
@@ -81,11 +81,11 @@ body {
     justify-content: flex-end;
 
     .filter-label-father {
-        width: 250px;
         display: flex;
         flex-flow: row nowrap;
         justify-content: flex-end;
         gap: 20px;
+        width: 250px;
         margin-right: 4%;
 
         .filter-label {
@@ -110,18 +110,18 @@ body {
     width: 100%;
 
     .numbers {
-        padding: 10px;
-        text-decoration: none;
         display: flex;
+        text-decoration: none;
+        padding: 10px;
 
         .number {
-            text-decoration: none;
             color: black;
+            text-decoration: none;
             padding: 5px;
         }
         .number:focus {
-            text-decoration: none;
             color: #52734d;
+            text-decoration: none;
             border: 2px solid #52734d;
             padding: 5px;
         }
@@ -130,8 +130,8 @@ body {
 
 @media only screen and (max-width: 768px) {
     .upper-block {
-        font-size: 20px;
         width: 260px;
+        font-size: 20px;
     }
 
     .button-father {
@@ -146,20 +146,20 @@ body {
     }
 
     .filter-block {
+        width: 400px;
         margin-left: 40px;
         margin-top: 20px;
-        width: 400px;
 
         .filter-label-father {
-            width: 400px;
             justify-content: flex-start;
             gap: 40px;
+            width: 400px;
             margin-left: 10px;
         }
     }
     .list-item {
-        width: 80%;
         justify-content: center;
+        width: 80%;
     }
 }
 
@@ -168,9 +168,9 @@ body {
         margin-left: 90px;
     }
     .button-father {
-        margin-left: 50px;
-        width: 300px;
         justify-content: space-between;
+        width: 300px;
+        margin-left: 50px;
 
         .button {
             width: 57px;
@@ -181,13 +181,12 @@ body {
     }
 
     .list-item {
-        width: 240px;
         justify-content: center;
+        width: 240px;
     }
 
     .filter-block {
-        margin-left: 25px;
-        margin-top: 10px;
+        margin: 10px 0px 0px 25px;
 
         .filter-label-father {
             justify-content: center;
