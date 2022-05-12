@@ -11,6 +11,7 @@ export default function ListItems() {
   const [filteredC, setFilteredC] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [countriesPerPage] = useState(10);
+  const [select, setSelect] = useState('default')
 
 
 
@@ -61,27 +62,32 @@ const paginate = (pageNumber) => {
 //reset function start
 
   const resetAll = () => {
-    
-    setFilteredC([])
-    setCurrentPage(1);
+    setFilteredC([]);
+    setSelect('default')
    };
+
 //reset function end
 
 
 
 //handleInput function start
+
+const changeSelect = (e) => {
+    setSelect(e.target.value)
+}
+
   const handleInput = (e) => {
     switch (e.target.value) {
       case "oceania":
         const filteredC = countries.filter(
-          (country) => country.region === "Oceania"
-        );
-        setFilteredC(filteredC);
+          (country) => country.region === "Oceania");
+          setFilteredC(filteredC);
+
         break;
 
       case "smaller":
-        const filteredC1 = countries.filter((country) => country.area < 65300);
-        setFilteredC(filteredC1);
+          const filteredC1 = countries.filter((country) => country.area < 65300);
+          setFilteredC(filteredC1);
 
         break;
       default:
@@ -95,7 +101,7 @@ const paginate = (pageNumber) => {
     <>
       <div className="upper-block">Countries</div>
       <Buttons sortA={sortA} sortD={sortD} resetAll={resetAll}></Buttons>
-      <Filter handleInput={handleInput}></Filter>
+      <Filter handleInput={handleInput} select={select} changeSelect={changeSelect}></Filter>
       <ul className="list-item-father">
         {filteredC.map((country, i) => (
           <li className="list-item" key={i}>
