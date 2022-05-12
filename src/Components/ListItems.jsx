@@ -13,6 +13,7 @@ export default function ListItems() {
   const [countriesPerPage] = useState(10);
 
 
+
 //fetch data with axios start
 
   useEffect(() => {
@@ -32,7 +33,7 @@ const indexOfFirst = indexOfLast - countriesPerPage;
 const shownCountries = countries.slice(indexOfFirst, indexOfLast)
 
 const paginate = (pageNumber) => {
-    setCurrentPage(pageNumber)
+    setCurrentPage(pageNumber);
   }
 
 // functions for pagination end
@@ -94,7 +95,7 @@ const paginate = (pageNumber) => {
       <div className="upper-block">Countries</div>
       <Buttons sortA={sortA} sortD={sortD} resetAll={resetAll}></Buttons>
       <Filter handleInput={handleInput}></Filter>
-      <ul className="list-item">
+      <ul className="list-item-father">
         {filteredC.map((country, i) => (
           <li className="list-item" key={i}>
             <span className="name">{country.name}</span>
