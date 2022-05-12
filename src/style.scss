@@ -1,7 +1,3 @@
-* {
-    font-family: 'lato', sans-serif;
-}
-
 /*
 #FEFFDE => off white
 #DDFFBC => light green
@@ -9,13 +5,17 @@
 #52734D => dark green
 */
 
+* {
+    font-family: "lato", sans-serif;
+}
+
 body {
-    background: #FEFFDE;
+    background: #feffde;
 }
 
 .upper-block {
-    background: #52734D;
-    color: #FEFFDE;
+    background: #52734d;
+    color: #feffde;
     width: 25%;
     height: 5%;
     font-size: 30px;
@@ -35,44 +35,45 @@ body {
     .button {
         width: 100px;
         height: 50px;
-        background: #DDFFBC;
+        background: #ddffbc;
         color: black;
         font-size: 17px;
         margin: 20px 0px 10px 40px;
-        border: 2px solid #52734D;
+        border: 2px solid #52734d;
         border-radius: 3px;
         cursor: pointer;
     }
 
     .button:focus {
-        background-color: #52734D;
-        color: #FEFFDE;
+        background-color: #52734d;
+        color: #feffde;
         border: 2px solid black;
         border-radius: 3px;
     }
 }
 
-
 .list-item {
     width: 94%;
     height: auto;
-    background-color: #DDFFBC;
-    color: #FEFFDE;
+    background-color: #ddffbc;
+    color: #feffde;
     list-style: none;
     text-align: left;
     padding: 10px;
     margin: 10px;
     display: flex;
     flex-flow: column wrap;
-        
-    .name, .region, .area{
-        color: #52734D;
+
+    .name,
+    .region,
+    .area {
+        color: #52734d;
         font-weight: bold;
         max-width: fit-content;
         line-height: 25px;
-        margin-left: 10px;     
-        } 
+        margin-left: 10px;
     }
+}
 
 .filter-block {
     display: flex;
@@ -86,37 +87,33 @@ body {
         justify-content: flex-end;
         gap: 20px;
         margin-right: 4%;
-            
-        
+
         .filter-label {
             width: 40px;
-            color: #52734D;
+            color: #52734d;
             font-size: 20px;
             font-weight: bold;
         }
-            
+
         .filter {
             width: 180px;
             height: auto;
-            border: 2px solid #52734D;
+            border: 2px solid #52734d;
         }
     }
 }
 
-    
 .numbersFather {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     width: 100%;
-    
 
     .numbers {
         padding: 10px;
         text-decoration: none;
         display: flex;
-        
-        
+
         .number {
             text-decoration: none;
             color: black;
@@ -124,8 +121,8 @@ body {
         }
         .number:focus {
             text-decoration: none;
-            color: #52734D;
-            border: 2px solid #52734D;
+            color: #52734d;
+            border: 2px solid #52734d;
             padding: 5px;
         }
     }
@@ -139,7 +136,7 @@ body {
 
     .button-father {
         margin-left: 10px;
-  
+
         .button {
             width: 60px;
             height: 30px;
@@ -157,9 +154,8 @@ body {
             width: 400px;
             justify-content: flex-start;
             gap: 40px;
-            margin-left: 10px; 
+            margin-left: 10px;
         }
-        
     }
     .list-item {
         width: 80%;
@@ -168,21 +164,21 @@ body {
 }
 
 @media only screen and (max-width: 422px) {
-   .upper-block {
+    .upper-block {
         margin-left: 90px;
-   }
-   .button-father {
-       margin-left: 50px;
-       width:300px;
-       justify-content: space-between;
-
-       .button {
-        width: 57px;
-        height: 20px;
-        font-size: 9px;
-        margin-left: 40px;
     }
-   }
+    .button-father {
+        margin-left: 50px;
+        width: 300px;
+        justify-content: space-between;
+
+        .button {
+            width: 57px;
+            height: 20px;
+            font-size: 9px;
+            margin-left: 40px;
+        }
+    }
 
     .list-item {
         width: 240px;
@@ -198,10 +194,8 @@ body {
         }
     }
     .list-item-father {
-        
         .list-item {
             margin-left: 50px;
         }
     }
-    
 }
