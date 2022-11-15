@@ -10,6 +10,7 @@ Site published at:  https://noravis.github.io/countries/
 
 - React.js 
 - Pagination
+- API
 
 ## Authors
 
